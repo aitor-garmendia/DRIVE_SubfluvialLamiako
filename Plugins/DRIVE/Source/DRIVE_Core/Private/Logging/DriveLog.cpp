@@ -1,0 +1,13 @@
+#include "Logging/DriveLog.h"
+
+DEFINE_LOG_CATEGORY(LogDriveCore);
+DEFINE_LOG_CATEGORY(LogDriveRuntime);
+DEFINE_LOG_CATEGORY(LogDriveClock);
+DEFINE_LOG_CATEGORY(LogDriveMessageBus);
+DEFINE_LOG_CATEGORY(LogDriveHost);
+DEFINE_LOG_CATEGORY(LogDriveUE);
+DEFINE_LOG_CATEGORY(LogDriveSimState);
+DEFINE_LOG_CATEGORY(LogDriveSystems);
+DEFINE_LOG_CATEGORY(LogDriveDebug);
+DEFINE_LOG_CATEGORY(LogDriveManager);
+DEFINE_LOG_CATEGORY(LogDriveTest);

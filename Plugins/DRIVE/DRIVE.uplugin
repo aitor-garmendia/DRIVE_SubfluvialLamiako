@@ -1,0 +1,24 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "DRIVE",
+  "Description": "Modular simulation framework",
+  "Category": "Simulation",
+  "EnabledByDefault": true,
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "DRIVE_Core",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "DRIVE_UE",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
