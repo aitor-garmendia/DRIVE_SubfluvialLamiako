@@ -20,10 +20,10 @@ public class DRIVE_Template : ModuleRules
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]
-		{
+		{	
+			"GraphEditor",
 			"Slate",
 			"SlateCore",
-			"GraphEditor",
 			"PropertyEditor",
 			"EditorStyle",
 			"AnimGraph",

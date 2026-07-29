@@ -14,6 +14,8 @@ public class DRIVE_TemplateRuntime : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"InputCore",
+			"Slate",
+			"SlateCore",
 			"AnimationCore",
 			"AnimGraphRuntime",
 			"EnhancedInput",

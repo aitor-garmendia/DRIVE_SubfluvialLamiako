@@ -13,6 +13,21 @@ void UDriveGameInstance::Init()
     PostWorldInitHandle = FWorldDelegates::OnPostWorldInitialization.AddUObject(
         this, &UDriveGameInstance::HandlePostWorldInit
     );
+
+    if (!GetWorld())
+        return;
+
+    GetWorld()->GetTimerManager().SetTimerForNextTick([this]()
+    {
+       if (GEngine && GEngine->GameViewport)
+       {
+           if (TSharedPtr<SWindow> MainWindow = GEngine->GameViewport->GetWindow())
+           {
+                MainWindow->SetWindowMode(EWindowMode::Windowed);
+                MainWindow->Maximize();
+           }
+       }
+    });
 }
 
 void UDriveGameInstance::HandleWorldCleanup(UWorld* World, bool bSessionEnded, bool bCleanupResources)
