@@ -19,6 +19,9 @@ public class DRIVE_TemplateRuntime : ModuleRules
 			"AnimationCore",
 			"AnimGraphRuntime",
 			"EnhancedInput",
+			"RHI",
+			"RenderCore",
+			"ChaosVehicles",
 			"DRIVE_Core",
 			"DRIVE_UE"
 		});

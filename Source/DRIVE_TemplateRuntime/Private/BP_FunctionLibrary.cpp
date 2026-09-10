@@ -3,6 +3,9 @@
 #include "Windows/AllowWindowsPlatformTypes.h"
 #include <windows.h>
 #include "Windows/HideWindowsPlatformTypes.h"
+#include "Engine/TextureRenderTarget2D.h"
+#include "ChaosWheeledVehicleMovementComponent.h"
+#include "ChaosVehicleWheel.h"
 
 FString UBP_FunctionLibrary::GetSystemHWID()
 {
@@ -37,4 +40,13 @@ EWindowMode::Type UBP_FunctionLibrary::GetWindowMode()
             return MainWindow->GetWindowMode();
 
     return EWindowMode::Windowed;
+}
+
+float UBP_FunctionLibrary::GetWheelMaxSteerAngle(UChaosWheeledVehicleMovementComponent* MovementComp, int32 WheelIndex)
+{
+    if (!MovementComp || !MovementComp->WheelSetups.IsValidIndex(WheelIndex))
+        return 0.f;
+
+    const UChaosVehicleWheel* WheelCDO = MovementComp->WheelSetups[WheelIndex].WheelClass.GetDefaultObject();
+    return WheelCDO ? WheelCDO->MaxSteerAngle : 0.f;
 }
